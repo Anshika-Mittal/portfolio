@@ -33,7 +33,7 @@ export const portfolioData = {
       institution: "Asha Modern School",
       location: "Saharanpur, Uttar Pradesh, India",
       duration: "Mar 2022 - Mar 2023",
-      percentage: "96.8%",
+      percentage: "95.8%",
       courses: ["Mathematics", "Physics", "Chemistry", "Computer Science"]
     },
     {
