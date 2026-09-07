@@ -78,6 +78,18 @@ export default function Home() {
     }
   };
 
+
+  const handleDownload = () => {
+  const link = document.createElement("a");
+
+  link.href = "/AM.pdf";
+  link.download = "Anshika_Mittal_Resume.pdf";
+
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
+
   return (
     <div className="relative">
       {/* Scroll Progress Bar */}
@@ -154,7 +166,7 @@ export default function Home() {
                   <FiArrowRight className="w-4 h-4" />
                 </a>
                 <a
-                  href={portfolioData.personalInfo.resumeUrl}
+                  onClick={handleDownload}
                   download
                   className="w-full sm:w-auto inline-flex items-center justify-center space-x-2 py-3 px-6 rounded-2xl border border-slate-205 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 font-semibold transition-colors text-sm"
                 >
@@ -223,7 +235,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-xl mx-auto mb-16">
             <h2 className="text-xs uppercase font-extrabold tracking-widest text-primary-500 mb-2">About Me</h2>
-            <h3 className="text-3xl font-extrabold text-slate-850 dark:text-white">Career Profile & Target Role</h3>
+            <h3 className="text-3xl font-extrabold text-slate-850 dark:text-white">Career Profile</h3>
             <div className="w-12 h-1 bg-primary-500 rounded-full mx-auto mt-4" />
           </div>
 
@@ -310,7 +322,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-xl mx-auto mb-16">
             <h2 className="text-xs uppercase font-extrabold tracking-widest text-primary-500 mb-2">Academic</h2>
-            <h3 className="text-3xl font-extrabold text-slate-850 dark:text-white">Education History</h3>
+            <h3 className="text-3xl font-extrabold text-slate-850 dark:text-white">Academic Journey</h3>
             <div className="w-12 h-1 bg-primary-500 rounded-full mx-auto mt-4" />
           </div>
 
